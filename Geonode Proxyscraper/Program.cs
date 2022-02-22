@@ -97,9 +97,10 @@ namespace Geonode_Proxyscraper
                                 protocolsa = protocl;
                             }
 
-                            if(speed == null || speed.Contains(string.Empty))
+                            if(speed == null || speed == "null" || city == null || city == "null")
                             {
                                 speed = "N/A";
+                                city = "N/A";
                             }
 
                             Console.WriteLine($"[+] {ip}:{port} | Speed: {speed}ms | Uptime: {uptime} | City: {city} | Protocol: {protocolsa}", Console.ForegroundColor = ConsoleColor.Yellow);
